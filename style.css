@@ -36,37 +36,58 @@ hr{
 
 /* .container:hover{
   width: 325px; 
-   height: 110px;
+  height: 110px;
 } */
 
 a{
+  width: 287px;
+  height: 100px;
   padding: 30px 50px;
   text-decoration: none;
   color: rgb(202, 204, 93);
   font-size: 2rem;
   border: 5px solid rgb(119, 182, 172);
   position: relative;
-  transition: all 0.3s;
   font-weight: 300;
   overflow: hidden;
 }
 
-a:hover{
-  background-color: #f44336;
-}
-
 a::before{
-  content: "";
-  background-color: rgba(112, 222, 182, 0.674);
+  content: "Thank You!";
+  background-color: rgb(112, 222, 182);
+  color: darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
-  transform: translateX(-100%) rotate(45deg);
-  transition: all 5s;
+  height: 100%;
+  /* transform: translate(-100%, 100%); */
+  transition: all 2s;
 }
 
 a:hover::before{
-  transform: translateX(100%) rotate(45deg);
+  transform: translate(100%, -100%); 
+}
+
+a::after{
+  content: "My Dear";
+  background-color: rgb(112, 222, 182);
+  color: darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(-100%, 100%);
+  transition: all 2s;
+}
+
+a:hover::after{
+  transform: translate(0, 0); 
 }
